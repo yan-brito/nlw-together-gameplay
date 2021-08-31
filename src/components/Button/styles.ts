@@ -10,20 +10,6 @@ export const Container = styled.TouchableOpacity`
     align-items: center;
 `;
 
-export const IconWraper = styled.View`
-    width: 56px;
-    height: 56px;
-    justify-content: center;
-    align-items: center;
-    border-right-width: 1px;
-    border-right-color: ${theme.colors.line};
-`;
-
-export const Icon = styled.Image`
-    width: 24px;
-    height: 18px;
-`;
-
 export const Title = styled.Text`
     flex: 1;
     color: ${theme.colors.heading}

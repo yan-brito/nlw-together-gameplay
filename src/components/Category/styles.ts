@@ -10,38 +10,36 @@ export const Content = styled.View<{ checked: boolean }>`
     width: 100px;
     height: 116px;
     opacity: ${props => props.checked ? 1 : 0.4};
-    background-color: ${theme.colors.secondary40};
     border-radius: 8px;
     justify-content: space-between;
     align-items: center;
-    padding: 7px 0 7px 0;
+    padding: 20px 0 20px 0;
 `;
 
 export const Check = styled.View<{ checked: boolean }>`
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    border-radius: 3px;
+
     ${props => props.checked ? 
     `
         width: 10px;
         height: 10px;
-        background-color: ${theme.colors.primary};
-        align-self: flex-end;
-        margin-right: 7px;
-        border-radius: 3px;
+        background-color: ${theme.colors.primary};        
 
     ` : 
     `
         width: 12px;
         height: 12px;
-        background-color: ${theme.colors.secondary100};
-        align-self: flex-end;
-        margin-right: 7px;
+        background-color: ${theme.colors.secondary100};     
         border: ${theme.colors.secondary50} solid 2px;
-        border-radius: 3px;
-
     `}
 `;
 
 export const Title = styled.Text`
-    font-family: ${theme.fonts.title500};
+    font-family: ${theme.fonts.title700};
     color: ${theme.colors.heading};
     font-size: 15px;
+    margin-top: 15px;
 `;

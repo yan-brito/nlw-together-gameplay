@@ -8,10 +8,11 @@ import { Check, Container, Content, Title } from './styles';
 type Props = TouchableOpacityProps & {
     title: string;
     icon: React.FC<SvgProps>;
+    hasCheckBox?: boolean;
     checked?: boolean;
 };
 
-export default function Category({ title, icon: Icon, checked = false, ...rest }: Props) {
+export default function Category({ title, icon: Icon, checked = false, hasCheckBox = false, ...rest }: Props) {
 
     const { secondary50, secondary70 } = theme.colors;
 
@@ -29,7 +30,9 @@ export default function Category({ title, icon: Icon, checked = false, ...rest }
             colors={[secondary50, secondary70]}
             >
                 <Content checked={checked}>
-                    <Check  checked={checked}/>
+                    { hasCheckBox &&
+                        <Check  checked={checked}/>
+                    }
                     <Icon 
                         width={48}
                         height={48}                        

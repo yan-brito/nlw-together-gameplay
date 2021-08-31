@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FlatList } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import { CategorySelectContainer, Container, Content, Header } from './styles';
 
@@ -9,9 +10,13 @@ import CategorySelect from '../../components/CategorySelect';
 import ListHeader from '../../components/ListHeader';
 import Appointment from '../../components/Appointment';
 import ListDivider from '../../components/ListDivider';
+import Background from '../../components/Background';
+
 
 
 export default function Home() {
+
+    const { navigate } = useNavigation<any>();
 
     const appointments = [
         {
@@ -46,35 +51,45 @@ export default function Home() {
         categoryId === category ? setCategory('') : setCategory(categoryId);
     };
 
-    return(
-        <Container>
-            <Header>
-                <Profile/>
-                <ButtonAdd/>
-            </Header>
-            <CategorySelectContainer>
-                <CategorySelect
-                    categorySelected={category}
-                    setCategory={handleCategorySelect}
-                />
-            </CategorySelectContainer>
-            <Content>
-                <ListHeader title="Partidas agendadas" subtitle="Total 6"/>
+    const handleAppointmentDetails = () => {
+        navigate('AppointmentDetails');
+    };
 
-                <FlatList
-                    data={appointments}
-                    keyExtractor={item => item.id}
-                    renderItem={({item}) => (
-                        <Appointment data={item}/>
-                    )}
-                    style={{
-                        marginTop: 24,
-                        marginLeft: 24
-                    }}
-                    showsVerticalScrollIndicator={false}
-                    ItemSeparatorComponent={() => <ListDivider/>}
-                />
-            </Content>
-        </Container>
+    const handleAppointmentCreate = () => {
+        navigate('AppointmentCreate');
+    };
+
+    return(
+        <Background>
+            <Container>
+                <Header>
+                    <Profile/>
+                    <ButtonAdd onPress={handleAppointmentCreate} />
+                </Header>
+                <CategorySelectContainer>
+                    <CategorySelect
+                        categorySelected={category}
+                        setCategory={handleCategorySelect}
+                    />
+                </CategorySelectContainer>
+                <Content>
+                    <ListHeader title="Partidas agendadas" subtitle="Total 6"/>
+
+                    <FlatList
+                        data={appointments}
+                        keyExtractor={item => item.id}
+                        renderItem={({item}) => (
+                            <Appointment data={item} onPress={handleAppointmentDetails}/>
+                        )}
+                        style={{
+                            marginTop: 24,
+                            marginLeft: 24
+                        }}
+                        showsVerticalScrollIndicator={false}
+                        ItemSeparatorComponent={() => <ListDivider/>}
+                    />
+                </Content>
+            </Container>
+        </Background>
     );
 };

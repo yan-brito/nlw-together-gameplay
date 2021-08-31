@@ -5,9 +5,9 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../../global/styles/theme';
 
 
-export default function ButtonAdd({}: TouchableOpacityProps) {
+export default function ButtonAdd({ onPress }: TouchableOpacityProps) {
     return (
-        <Container>
+        <Container onPress={onPress}>
             <MaterialCommunityIcons 
                 name="plus"
                 color={theme.colors.heading}
