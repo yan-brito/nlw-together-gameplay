@@ -5,7 +5,6 @@ import { getBottomSpace } from 'react-native-iphone-x-helper';
 export const Banner = styled.ImageBackground`
     width: 100%;
     height: 234px;
-    margin-bottom: 30px;
 `;
 
 export const BannerContent = styled.View`
@@ -17,13 +16,14 @@ export const BannerContent = styled.View`
 export const Title = styled.Text`
     font-size: 28px;
     font-family: ${theme.fonts.title700};
-    color: ${theme.colors.heading}
+    color: ${theme.colors.heading};
 `;
 
 export const Subtitle = styled.Text`
     font-size: 13px;
     font-family: ${theme.fonts.text400};
-    color: ${theme.colors.heading}
+    color: ${theme.colors.heading};
+    line-height: 21px;
 `;
 
 export const Footer = styled.View`

@@ -24,11 +24,15 @@ export default function AppointmentCreate() {
     const [guild, setGuild] = useState<GuildProps>({} as GuildProps);
 
     const handleCategorySelect = (categoryId: string) => {
-        categoryId === category ? setCategory('') : setCategory(categoryId);
+        setCategory(categoryId);
     };
 
     const handleOpenGuilds = () => {
         setOpenGuildsModal(true);
+    };
+
+    const handleCloseGuilds = () => {
+        setOpenGuildsModal(false);
     };
 
     const handleGuildSelect = (guildSelect: GuildProps) => {
@@ -39,7 +43,7 @@ export default function AppointmentCreate() {
     return(
         <KeyboardAvoidingView 
             style={{flex: 1}}
-            behavior={(Platform.OS === 'ios') ? 'padding' : 'height'}
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         >
             <Background>
                 <ScrollView>
@@ -60,7 +64,7 @@ export default function AppointmentCreate() {
                                     : <GuildImage />
                                 }
                                 <SelectBody>
-                                    <Label> 
+                                    <Label center > 
                                         { guild.name 
                                             ? guild.name 
                                             : 'Selecione um servidor'
@@ -109,7 +113,7 @@ export default function AppointmentCreate() {
                     </Form>
                 </ScrollView>
             </Background>
-            <ModalView visible={openGuildsModal} >
+            <ModalView visible={openGuildsModal} closeModal={handleCloseGuilds} >
                 <Guilds handleGuildSelect={handleGuildSelect} />
             </ModalView>
         </KeyboardAvoidingView>

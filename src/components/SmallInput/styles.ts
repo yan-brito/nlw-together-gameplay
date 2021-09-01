@@ -9,6 +9,8 @@ export const Input = styled.TextInput`
     background-color: ${theme.colors.secondary40};
     color: ${theme.colors.heading};
     border-radius: 8px;
+    border-width: 1px;
+    border-color: ${theme.colors.secondary50};
     margin-right: 4px;
     text-align: center;
 `;

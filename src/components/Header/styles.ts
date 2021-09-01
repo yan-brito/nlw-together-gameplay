@@ -12,3 +12,7 @@ export const Title = styled.Text`
     font-size: 20px;
     color: ${theme.colors.heading};
 `;
+
+export const Wrapper = styled.View`
+    width: 24px;
+`;

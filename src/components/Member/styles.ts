@@ -32,6 +32,6 @@ export const BulletStatus = styled.View<{status: boolean}>`
     width: 8px;
     height: 8px;
     border-radius: 4px;
-    background-color: ${ props => props.status ? theme.colors.on : theme.colors.primary }
+    background-color: ${ props => props.status ? theme.colors.on : theme.colors.primary };
     margin-right: 9px;
 `;

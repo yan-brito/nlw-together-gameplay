@@ -13,10 +13,11 @@ export const Title = styled.Text`
     margin: 36px 0 18px 24px;
 `;
 
-export const Label = styled.Text`
+export const Label = styled.Text<{ center?: boolean; }>`
     font-size: 18px;
     font-family: ${theme.fonts.title700};
     color: ${theme.colors.heading};
+    ${props => props.center ? '' :  'margin-bottom: 12px'};
 `;
 
 export const Form = styled.View`
@@ -48,7 +49,8 @@ export const SelectBody = styled.View`
 export const GuildImage = styled.View`
     width: 64px;
     height: 68px;
-    background-color: ${theme.colors.secondary50};
+    background-color: ${theme.colors.secondary40};
+    border-color: ${theme.colors.secondary50};
     border-width: 1px;
     border-radius: 8px;
 `;

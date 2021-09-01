@@ -5,6 +5,10 @@ export const ModalContainer = styled.Modal`
 
 `;
 
+export const CloseModal = styled.TouchableWithoutFeedback`
+  
+`;
+
 export const Overlay = styled.View`
     flex: 1;
     background-color: ${theme.colors.overlay};
@@ -21,5 +25,5 @@ export const Bar = styled.View`
     border-radius: 2px;
     background-color: ${theme.colors.secondary30};
     align-self: center;
-    margin: 13px 0 103px 0;
+    margin-top: 13px;
 `;

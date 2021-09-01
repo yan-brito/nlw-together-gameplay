@@ -4,7 +4,7 @@ import { BorderlessButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
-import { Container, Title } from './styles';
+import { Container, Title, Wrapper } from './styles';
 import { theme } from '../../global/styles/theme';
 import { useNavigation } from '@react-navigation/native';
 
@@ -41,10 +41,13 @@ export default function Header({ title, action }: Props) {
 
             <Title> { title } </Title>
 
-            { action &&
+            { action 
+                ?   
                 <Container>
                     { action }
                 </Container>
+                :
+                <Wrapper/>   
             }
         </LinearGradient>
     );

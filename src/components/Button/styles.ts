@@ -12,7 +12,7 @@ export const Container = styled.TouchableOpacity`
 
 export const Title = styled.Text`
     flex: 1;
-    color: ${theme.colors.heading}
+    color: ${theme.colors.heading};
     font-size: 15px;
     text-align: center;
     font-family: ${theme.fonts.text500};

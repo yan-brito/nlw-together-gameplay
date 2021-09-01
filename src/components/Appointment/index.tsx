@@ -1,20 +1,27 @@
 import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
 
-import { Container, Content, ContentContainer, Header, Category, Title, PlayersInfo, Player, Footer, DateInfo, Date } from './styles';
+import { 
+    Container, 
+    Content, 
+    ContentContainer, 
+    Header, Category, 
+    Title, 
+    PlayersInfo, 
+    Player, 
+    Footer, 
+    DateInfo, 
+    Date 
+} from './styles';
+
+import { theme } from '../../global/styles/theme';
 import PlayerSvg from '../../assets/player.svg';
 import CalendarSvg from '../../assets/calendar.svg';
 
 import GuildIcon from '../GuildIcon';
 import { categories } from '../../utils/category';
-import { theme } from '../../global/styles/theme';
-
-export type GuildProps = {
-    id: string,
-    name: string,
-    icon: null,
-    owner: boolean
-};
+import { GuildProps } from '../Guild';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export type AppointmentProps = {
     id: string;
@@ -32,14 +39,25 @@ export default function Appointment({ data, ...rest }: Props) {
 
     const [category] = categories.filter(item => item.id === data.category);
     const { owner } = data.guild;
-    const { primary, on } = theme.colors;
+    const { primary, on, secondary50, secondary70 } = theme.colors;
 
 
     return(
         <Container {...rest}>
             <ContentContainer>
-                <GuildIcon />
-
+                <LinearGradient
+                    colors={[ secondary50, secondary70 ]}
+                    style={{ 
+                        height: 68, 
+                        width: 64, 
+                        borderRadius: 8, 
+                        alignItems: 'center', 
+                        justifyContent: 'center', 
+                        marginRight: 20 
+                    }}
+                >
+                    <GuildIcon />
+                </LinearGradient>
                 <Content>
                     <Header>
                         <Title> { data.guild.name } </Title>
