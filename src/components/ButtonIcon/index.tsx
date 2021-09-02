@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Icon, IconWraper, Title } from './styles';
 import { TouchableOpacityProps } from 'react-native';
+
+import { Container, Icon, IconWraper, Title } from './styles';
 
 const  discordIcon = require('../../assets/discord.png');
 

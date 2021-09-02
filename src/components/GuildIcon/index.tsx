@@ -1,18 +1,35 @@
 import React from 'react';
-import { Container } from './styles';
+
+import { Avatar, Container } from './styles';
+
+import DiscordSvg from '../../assets/discord.svg';
+
+const { CDN_IMAGE } = process.env;
 
 type Props = {
-
+    guildId: string;
+    iconId: string | null;
 };
 
-export default function GuildIcon({}: Props) {
+export default function GuildIcon({ guildId, iconId }: Props) {
 
-    const uri = 'https://gamerssuffice.com/wp-content/uploads/2019/11/How-to-add-bots-to-discord-500x405.jpg'
+    const uri = `${CDN_IMAGE}/icons/${guildId}/${iconId}.png`
 
     return(
-        <Container
-            source={{ uri: uri }}
-        >
+        <Container>
+            {iconId 
+                ?
+                <Avatar 
+                    source={{ uri: uri }}
+                    resizeMode="cover"
+                />
+                :
+                <DiscordSvg 
+                    width={40} 
+                    height={40}
+                />
+            }
+
             
         </Container>
     );

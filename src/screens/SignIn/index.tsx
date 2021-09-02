@@ -1,5 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Alert, ActivityIndicator } from 'react-native';
+
+import { theme } from '../../global/styles/theme';
 import { Container, Content, Illustration, Subtitle, Title } from './styles';
 
 import { useAuth } from '../../hooks/auth';
@@ -7,7 +9,6 @@ import { useAuth } from '../../hooks/auth';
 import illustrationImage from '../../assets/illustration.png';
 import ButtonIcon from '../../components/ButtonIcon';
 import Background from '../../components/Background';
-import { theme } from '../../global/styles/theme';
 
 
 export default function SignIn() {

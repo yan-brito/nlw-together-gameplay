@@ -3,10 +3,10 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { useNavigation } from '@react-navigation/native';
 
 import { Container, Title, Wrapper } from './styles';
 import { theme } from '../../global/styles/theme';
-import { useNavigation } from '@react-navigation/native';
 
 type Props = {
     title: string,

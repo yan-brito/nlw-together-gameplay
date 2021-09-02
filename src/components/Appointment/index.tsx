@@ -1,5 +1,6 @@
 import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import { 
     Container, 
@@ -13,15 +14,15 @@ import {
     DateInfo, 
     Date 
 } from './styles';
-
 import { theme } from '../../global/styles/theme';
+
 import PlayerSvg from '../../assets/player.svg';
 import CalendarSvg from '../../assets/calendar.svg';
 
 import GuildIcon from '../GuildIcon';
+
 import { categories } from '../../utils/category';
 import { GuildProps } from '../Guild';
-import { LinearGradient } from 'expo-linear-gradient';
 
 export type AppointmentProps = {
     id: string;
@@ -56,7 +57,7 @@ export default function Appointment({ data, ...rest }: Props) {
                         marginRight: 20 
                     }}
                 >
-                    <GuildIcon />
+                    <GuildIcon guildId={data.guild.id} iconId={data.guild.icon} />
                 </LinearGradient>
                 <Content>
                     <Header>

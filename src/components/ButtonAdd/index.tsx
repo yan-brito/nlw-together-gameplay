@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container } from './styles';
 import { TouchableOpacityProps } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+
+import { Container } from './styles';
 import { theme } from '../../global/styles/theme';
 
 

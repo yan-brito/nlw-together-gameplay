@@ -1,7 +1,10 @@
 import React from 'react';
-import { useAuth } from '../../hooks/auth';
-import Avatar from '../Avatar';
+
 import { Container, Content, Greeting, Message, User, Username } from './styles';
+
+import Avatar from '../Avatar';
+
+import { useAuth } from '../../hooks/auth';
 
 export default function Profile() {
 

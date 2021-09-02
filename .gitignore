@@ -10,8 +10,7 @@ npm-debug.*
 *.orig.*
 *.txt*
 web-build/
-
-src/configs/discordAuth.ts
+.env
 
 # macOS
 .DS_Store

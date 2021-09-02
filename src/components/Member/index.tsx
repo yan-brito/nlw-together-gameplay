@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { BulletStatus, Container, Content, Status, StatusText, Title } from './styles';
 
 import Avatar from '../Avatar';
