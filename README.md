@@ -42,7 +42,7 @@ The application allows you to login with your discord account, with the possibil
 
 # 🚀 Getting started
 
-### Clone the project and access the folder.
+### Clone the project
 
     $ git clone https://github.com/yan-brito/nlw-together-gameplay.git
 
