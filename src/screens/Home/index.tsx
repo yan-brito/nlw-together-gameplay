@@ -39,6 +39,18 @@ export default function Home() {
         
     };
 
+    const deleteAppointment = async (itemId:string) => {
+
+        const storage = await AsyncStorage.getItem(COLLECTION_APPOINTMENTS);
+        const appointments = storage ? JSON.parse(storage) : [];
+        
+        const newAppointments = appointments.filter((item:AppointmentProps) => item.id !== itemId);
+
+        await AsyncStorage.setItem(COLLECTION_APPOINTMENTS, JSON.stringify(newAppointments));
+
+        setAppointments(newAppointments);
+    };
+
     const[category, setCategory] = useState('');
 
     const handleCategorySelect = (categoryId: string) => {
@@ -51,10 +63,6 @@ export default function Home() {
 
     const handleAppointmentCreate = () => {
         navigate('AppointmentCreate');
-    };
-
-    const deleteData = async () => {
-        await AsyncStorage.clear();
     };
 
     useFocusEffect(useCallback(() => {
@@ -84,7 +92,7 @@ export default function Home() {
                             data={appointments}
                             keyExtractor={item => item.id}
                             renderItem={({item}) => (
-                                <Appointment data={item} onPress={() => handleAppointmentDetails(item)}/>
+                                <Appointment data={item} onPress={() => handleAppointmentDetails(item)} deleteAppointment={deleteAppointment} />
                             )}
                             style={{
                                 marginTop: 24,

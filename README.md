@@ -2,27 +2,25 @@
 
 ---
 
-<h1 align="center"><p>
-<img src="https://i.ibb.co/rvt0WpW/icon.png" width="100">
-</p><b>GlamePlay</b>
-</h1>
 
-</br>
+<p align="center"><img src="https://i.ibb.co/rvt0WpW/icon.png" width="100"></p>
+<p align="center"><b>GlamePlay</b></p>
+
 
 ---
 <p align="center">
     <a href="#-About">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="#-Installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#-Getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="#-Interface">Interface</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#-Improvements">Improvements</a>
+    <a href="#-New-features">New Features</a>
 </p>
 
 ---
 
 </br>
 
-# About
+# 📍 About
 
 <p><b>GamePlay</b> was developed during <b>NLW Together</b>.</p>
 The application allows you to login with your discord account, with the possibility to schedule matches and connect directly to servers through Deep Link.</p>
@@ -32,28 +30,25 @@ The application allows you to login with your discord account, with the possibil
 </br>
 </br>
 
-# Technologies
-- React-native
-- Typescript
-- Expo and AuthSession
-- Vector Icons
-- React Native Svg
-- Axios
-- OAuth2 (Discord)
-- Async Storage
-- Context API
-- Deep Link
+# 🧪 Technologies
+- [React-native](https://reactnative.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Expo](https://expo.dev/)
 
 </br>
 </br>
 </br>
 </br>
 
-# Installation
-Run <b>yarn install</b> or <b>npm install</b>
+# 🚀 Getting started
 
-## Environment variables: 
-Fill the credentials in <u>.env.example</u> and rename it to <b>.env</b>
+### Clone the project
+
+    $ git clone https://github.com/yan-brito/nlw-together-gameplay.git
+
+
+### Environment variables: 
+Define the credentials in <u>.env.example</u> and rename it to <b>.env</b>
 ````
 REDIRECT_URI=
 SCOPE=
@@ -61,8 +56,13 @@ RESPONSE_TYPE=token
 CLIENT_ID=
 CDN_IMAGE=
 ````
+### Running
 
-<p>To start run <b>expo start</b></p>
+    # Install the dependencies
+    $ yarn
+
+    # Start the project
+    $ expo start
 
 
 </br>
@@ -70,7 +70,7 @@ CDN_IMAGE=
 </br>
 </br>
 
-# Interface
+# 🔖 Interface
 
 <p>
     <img src="https://ik.imagekit.io/cnbmdh4b9w/GamePlayFigma_n37WowQc7.png?updatedAt=1626991756128">
@@ -80,7 +80,7 @@ Developed by [Thiago Luchtenberg](https://www.linkedin.com/in/tiagoluchtenberg/?
 
 </p>
 
-See the complete layout on [figma](<https://www.figma.com/file/QhTjxPzgnHHn0H2Bs3126c/GamePlay---NLW-Together-(Copy)?node-id=58913%3A83>).
+See the complete layout on [figma](<https://www.figma.com/file/QhTjxPzgnHHn0H2Bs3126c/GamePlay---NLW-Together-(Copy)?node-id=58913%3A83>). (You need to have an account to access it.)
 
 </br>
 </br>
@@ -88,17 +88,27 @@ See the complete layout on [figma](<https://www.figma.com/file/QhTjxPzgnHHn0H2Bs
 </br>
 
 
-# Improvements
+# 🆕 New features
+
+- [x] Styling with Styled Components
 
 - [ ] Data validation on the appointment creation screen
 
 - [ ] SignOut modal
 
-- [ ] Alert modal
+- [x] Alert modal
+
+<p align="center">
+    <img src="https://imgur.com/NaluFkM.gif" width="200">
+</p>
 
 - [ ] Dismiss the guild selection modal with a gesture
 
-- [ ] Delete an appointment with a gesture
+- [x] Delete an appointment with a gesture
+
+<p align="center">
+    <img src="https://i.imgur.com/Dk0vCI5.gif" width="200">
+</p>
 
 - [ ] Discord bot integration
 
@@ -110,12 +120,10 @@ See the complete layout on [figma](<https://www.figma.com/file/QhTjxPzgnHHn0H2Bs
 
 
 
-<h2 align="center"> Instructor</h2>
+<h4 align="center"> Instructor</h2>
 
-<h3 align="center">
+<h5 align="center">
 
 [Rodrigo Gonçalves](https://www.linkedin.com/in/rodrigo-gon%C3%A7alves-santana/)
 
 <h3>
-
-

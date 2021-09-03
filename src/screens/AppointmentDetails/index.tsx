@@ -22,6 +22,7 @@ import Load from '../../components/Load';
 
 import { AppointmentProps } from '../../components/Appointment';
 import { MemberProps } from '../../components/Member';
+import ModalDialog from '../../components/ModalDialog';
 
 
 type Params = {
@@ -42,6 +43,7 @@ export default function AppointmentDetails() {
 
     const [widget, setWidget] = useState<Widget>({} as Widget);
     const [loading, setLoading] = useState(true);
+    const [alert, setAlert] = useState(false);
 
     const fetchWidgetInfo = async () => {
         try {
@@ -51,7 +53,7 @@ export default function AppointmentDetails() {
             setWidget(response.data);
 
         } catch (error) {
-            Alert.alert('Verifique as configurações do servidor. Será que o Widget está habilitado?')
+            setAlert(true);
         } finally {
             setLoading(false);
         };
@@ -129,6 +131,7 @@ export default function AppointmentDetails() {
                     <ButtonIcon title="Entrar na partida" onPress={handleOpenGuild} />
                 }
             </Footer>
+            <ModalDialog visible={alert} title="Verifique as configurações do servidor. Será que o Widget está habilitado?"/>
         </Background>
     );
 };
