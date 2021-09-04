@@ -7,10 +7,11 @@ import Background from '../Background';
 
 type Props = ModalProps & {
     children: ReactNode;
-    closeModal: () => void;
+    closeModal?: () => void;
+    bottom?: boolean;
 };
 
-export default function ModalView({ children, closeModal, ...rest }: Props) {
+export default function ModalView({ children, closeModal, bottom = false, ...rest }: Props) {
     return(
         <ModalContainer
             transparent
@@ -20,9 +21,11 @@ export default function ModalView({ children, closeModal, ...rest }: Props) {
         >
             <CloseModal onPress={closeModal}>
                 <Overlay>
-                    <Container>
+                    <Container bottom={bottom}>
                         <Background>
-                            <Bar/>
+                            {!bottom &&
+                                <Bar/>
+                            }
                             { children }
                         </Background>
                     </Container>

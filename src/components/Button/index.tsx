@@ -6,11 +6,12 @@ import { Container, Title } from './styles';
 
 type Props = TouchableOpacityProps & {
     title: string;
+    transparent?: boolean;
 };
 
-export default function Button({ title, ...rest } : Props) {
+export default function Button({ title, transparent, ...rest } : Props) {
     return (
-        <Container {...rest} >
+        <Container {...rest} transparent={transparent} >
             <Title>
                 { title }
             </Title>

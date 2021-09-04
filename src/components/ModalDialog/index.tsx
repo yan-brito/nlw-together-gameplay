@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ModalProps } from 'react-native';
-import { ButtonsContainer, ButtonTitle, CancelButton, ConditionalContainer, Container, Divider, ModalContainer, Button, Overlay, Title } from './styles';
+
+import { ButtonsContainer, ConditionalContainer, Container, Divider, ModalContainer, Overlay, Title, ButtonBox } from './styles';
+
+import Button from '../Button';
 
 type Props = ModalProps &{
     title: string;
@@ -34,18 +37,18 @@ export default function ModalDialog({ title, isConditional = false, visible, con
                         {isConditional
                             ?
                             <ConditionalContainer>
-                                <Button onPress={confirm}>
-                                    <ButtonTitle > Sim </ButtonTitle>
-                                </Button>
-                                <CancelButton onPress={cancel}>
-                                    <ButtonTitle> Cancelar </ButtonTitle>
-                                </CancelButton>  
+                                <ButtonBox >
+                                    <Button title="Sim" onPress={confirm ? confirm : () => setModalVisible(false)} />
+                                </ButtonBox>
+                                <ButtonBox>
+                                    <Button title="Cancelar" onPress={cancel ? cancel : () => setModalVisible(false)} transparent />
+                                </ButtonBox>  
                             </ConditionalContainer> 
                             :
                             <ConditionalContainer>
-                                <Button activeOpacity={0.7} onPress={() => setModalVisible(false)}>
-                                    <ButtonTitle> Ok </ButtonTitle>
-                                </Button>
+                                <ButtonBox>
+                                    <Button title="Ok" onPress={() => setModalVisible(false)} />
+                                </ButtonBox>
                             </ConditionalContainer>
                             
                         }

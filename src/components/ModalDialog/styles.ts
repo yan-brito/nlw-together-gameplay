@@ -18,7 +18,7 @@ export const Overlay = styled.View`
 `;
 
 export const Container = styled.View`
-    width: 70%;
+    width: 80%;
     height: 200px;
     background-color: ${theme.colors.secondary80};
     border-radius: 10px;
@@ -53,25 +53,6 @@ export const Divider = styled.View`
     background-color: ${theme.colors.highlight};
 `;
 
-export const Button = styled.TouchableOpacity`
+export const ButtonBox = styled.View`
     width: 42%;
-    align-items: center;
-    justify-content: center;
-    background-color: ${theme.colors.primary};
-    border-radius: 8px;
-`;
-
-export const CancelButton = styled.TouchableOpacity`
-    width: 42%;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid ${theme.colors.highlight};
-    border-radius: 8px;
-`;
-
-
-export const ButtonTitle = styled.Text`
-    font-family: ${theme.fonts.text500};
-    color: ${theme.colors.heading};
-    font-size: 14px;
 `;
