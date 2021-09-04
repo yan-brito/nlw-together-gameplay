@@ -94,7 +94,12 @@ See the complete layout on [figma](<https://www.figma.com/file/QhTjxPzgnHHn0H2Bs
 
 - [ ] Data validation on the appointment creation screen
 
-- [ ] SignOut modal
+- [x] SignOut modal
+
+<p align="center">
+    <img src="https://imgur.com/rDKijBH.gif" width="200">
+</p>
+
 
 - [x] Alert modal
 
@@ -102,7 +107,6 @@ See the complete layout on [figma](<https://www.figma.com/file/QhTjxPzgnHHn0H2Bs
     <img src="https://imgur.com/NaluFkM.gif" width="200">
 </p>
 
-- [ ] Dismiss the guild selection modal with a gesture
 
 - [x] Delete an appointment with a gesture
 
